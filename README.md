@@ -1,4 +1,4 @@
-# adp-ros-packages
+# ros-rust-open
 
 ## start.sh 이주
 
@@ -6,11 +6,11 @@
 
 워크스페이스에 대한 이해가 적을 때 만든 스크립트라 그렇습니다.
 
-## adprs_ws 생성
+## adp_ws 생성
 
-그리고 ros2_rust 관련 패키지 설정을 위한 워크스페이스 및 스크립트를 만들도록 하겠습니다. > adprs_ws
+그리고 ros2_rust 관련 패키지 설정을 위한 워크스페이스 및 스크립트를 만들도록 하겠습니다. > adp_ws
 
-adprs_ws/init.sh는 반드시 `source` 또는 `.`으로 실행해주시길 바랍니다. 패키지 설정을 위한 sudo 관련 요청이 있습니다.
+adp_ws/init.sh는 반드시 `source` 또는 `.`으로 실행해주시길 바랍니다. 패키지 설정을 위한 sudo 관련 요청이 있습니다.
 
 init.sh에 rustup(러스트 컴파일러, 패키지 관리자 통합 관리자) 설치, rust 관련 colcon 패키지 설치 등이 포함되어 있습니다.
 
@@ -23,4 +23,4 @@ init.sh은 이후 build_ros2_rust.sh를 실행합니다. 따로 나눈 이유는
 build_ros2_rust.sh는 필요한 레포지토리들을 불러오고, 러스트 의존성 충돌을 해결하고 (3줄, sed 명령어로 간략히) colcon build를 수행합니다.
 
 즉, 그 빌드가 성공하면 /install/setup.bash 실행을 통해 다른 forza_ws, f1tenth_ws 같이 overlay로서 동작하는 rust 스타일의 ros2 개발을 할 수 있습니다.
-# ros-rust-open
+
